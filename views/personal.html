@@ -18,10 +18,93 @@
 <body>
 
 <body ontouchstart>
+
+<body ontouchstart>
 <div id="container" class="container">
     <ul class="content">
         <li class="page page1">
             <div class="page-bd"></div>
+        </li>
+        <li class="page page2">
+            <div class="page-bd">
+                <div class="phone-time">
+                    <div id="phone_lock_time" class="phone-lock-time"></div>
+                    <div id="phone_lock_date" class="phone-lock-date"></div>
+                </div>
+                <div class="msg">
+                    <ul class="ui-list msg-list ui-border-tb">
+                        <li class="ui-border-t">
+                            <div class="ui-list-img">
+                                <span class="qq-logo"></span>
+                            </div>
+                            <div class="ui-list-info">
+                                <h4 class="ui-nowrap">QQ <span class="txt-trans txt-s">现在</span></h4>
+                                <h4 class="ui-nowrap msg-info"><span class="txt-trans">4个人</span> 邀请你加群</h4>
+                                <p class="txt-trans txt-s msg-sub-info">滑动来查看</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="slide-info">> 滑动来解锁</p>
+                <div class="pin"></div>
+            </div>
+        </li>
+        <li class="page page3">
+            <div class="page-bd">
+                <!--灰色按钮把hi-light去除-->
+                <ul class="ui-list friend-list ui-list-function ">
+                    <li class="active hi-light">
+                        <div class="ui-list-img">
+                            <span class="pro-logo" style="background-image: url(../img/avatar.png)"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-b">
+                            <h4 class="ui-nowrap ">游戏中心公测红包群</h4>
+                            <p class="sub-msg ui-nowrap">快来快来发红包啦</p>
+                            <p>邀请人：产品汪-琳琳</p>
+                        </div>
+                        <div class="ui-btn">同意</div>
+                        <div class="figer figer1" data-index="1"></div>
+                    </li>
+                    <li class="active hi-light">
+                        <div class="ui-list-img">
+                            <span class="gift-logo"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-b">
+                            <h4 class="ui-nowrap">游戏中心公测红包群</h4>
+                            <p class="sub-msg ui-nowrap ">你有一个游戏礼包未领取</p>
+                            <p class="">邀请人：礼包&邮递员</p>
+                        </div>
+                        <div class="ui-btn">同意</div>
+                        <div class="figer figer2" data-index="2"></div>
+                    </li>
+                    <li class="active hi-light">
+                        <div class="ui-list-img">
+                            <span class="compete-logo"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-b">
+                            <h4 class="ui-nowrap">游戏中心公测红包群</h4>
+                            <p class="sub-msg ui-nowrap ">带你与高手同场爽快竞技</p>
+                            <p class="">邀请人：赛事♀女主播</p>
+                        </div>
+                        <div class="ui-btn">同意</div>
+                        <div class="figer figer3" data-index="3"></div>
+                    </li>
+                    <li class="active hi-light">
+                        <div class="ui-list-img">
+                            <span class="news-logo"></span>
+                        </div>
+                        <div class="ui-list-info ui-border-b">
+                            <h4 class="ui-nowrap">游戏中心公测红包群</h4>
+                            <p class="sub-msg ui-nowrap ">进群领红包</p>
+                            <p class="">邀请人：社区-新大使</p>
+                        </div>
+                        <div class="ui-btn">同意</div>
+                        <div class="figer figer4" data-index="4"></div>
+                        <!--<div class="txt-btn">已同意</div>-->
+                    </li>
+                </ul>
+
+            </div>
         </li>
         <li class="page page4">
             <div class="page-bd">
@@ -29,18 +112,230 @@
                 <div class="page4-list">
                     <div id="scroller">
                         <div class="date">上午10:17</div>
+                        <div class="chat-wrap">
+                            <div class="chat-info">
+                                <em>产品汪-琳琳</em>邀请了你加入群
+                            </div>
+                        </div>
+                        <ul class="page4-ul">
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="pro-logo" style="background-image: url(../img/avatar.png)"></span>
+                                </div>
+                                <div class="nick-name">琳琳</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>来来来，我把cooper拉进群了。游戏中心两年来，感谢你一直陪伴着我们。今天新版本发布啦，此处应有红包！
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="gift-logo"></span>
+                                </div>
+                                <div class="nick-name">礼包&邮递员</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>别急，不仅有红包，还有一大波礼包砸过来了！有图有真相！
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="animated  type-img fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="gift-logo"></span>
+                                </div>
+                                <div class="nick-name">礼包&邮递员</div>
+                                <div class="list-info animated">
+                                    <img src="../img/page4/thumb1.jpg" data-src="../img/page4/pic1.jpg" width="100" height="176"/>
+                                    <div class="figer"></div>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="compete-logo"></span>
+                                </div>
+                                <div class="nick-name">赛事♀女主播</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>礼包算什么，听说年底还有全民竞技大赛呢！100万奖金找大神，还有美女主播哟！快过来赛事中心参赛啊啊啊啊～～～
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="animated  type-img fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="compete-logo"></span>
+                                </div>
+                                <div class="nick-name">赛事♀女主播</div>
+                                <div class="list-info animated">
+                                    <img src="../img/page4/thumb2.jpg" data-src="../img/page4/pic2.jpg" width="100" height="176"/>
+                                    <div class="figer"></div>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="news-logo"></span>
+                                </div>
+                                <div class="nick-name">社区-新大使</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>你们都是大神，我只能在社区频道发发贴子，看看攻略视频，静静地看你们装x了。。。
 
-
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="animated  type-img fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="news-logo"></span>
+                                </div>
+                                <div class="nick-name">社区-新大使</div>
+                                <div class="list-info animated">
+                                    <img src="../img/page4/thumb3.jpg" data-src="../img/page4/pic3.jpg" width="100" height="176"/>
+                                    <div class="figer"></div>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="pro-logo" style="background-image: url(../img/avatar.png)"></span>
+                                </div>
+                                <div class="nick-name">琳琳</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>你们够了！！我要发红包了，别拦我！！！</p>
+                                </div>
+                            </li>
+                            <li class="animated type-packet fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="pro-logo" style="background-image: url(../img/avatar.png)"></span>
+                                </div>
+                                <div class="nick-name">琳琳</div>
+                                <div class="list-info">
+                                    <div class="detail">
+                                        <h4>红包抽奖</h4>
+                                        <div class="sub-title">点击拆开</div>
+                                    </div>
+                                    <img src="../img/page4/hongbao.png" width="139"/>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="gift-logo"></span>
+                                </div>
+                                <div class="nick-name">礼包&邮递员</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>叮！记得去手q－动态－游戏－我的仓库领取奖励啊，重要的事情我只说一遍。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="animated  type-text fadeIn">
+                                <div class="ui-avatar-s">
+                                    <span class="gift-logo"></span>
+                                </div>
+                                <div class="nick-name">礼包&邮递员</div>
+                                <div class="txt-info">
+                                    <div class="info-bg info-bg-t"></div>
+                                    <div class="info-bg info-bg-b"></div>
+                                    <p>客官，要是瞅着喜欢，求个分享让小伙伴都乐呵乐呵吧？
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="page-bottom ui-border-t show">
+                    <i class="icon-mirco"></i>
+                    <div class="input-wrap">
 
+                    </div>
+                    <i class="icon-face"></i>
+                    <i class="icon-plus"></i>
                 </div>
             </div>
 
         </li>
     </ul>
 </div>
+
+
+<div class="ui-loading-block">
+    <div class="ui-loading-cnt">
+        <i class="ui-loading-bright"></i>
+        <p>正在加载中...</p>
+    </div>
+</div>
+<div class="page-dialog page-share">
+    <div class="share"></div>
+</div>
+
+<div class="page-dialog" id="page-dialog1">
+    <img src="" class="animated zoomIn" width="100%"/>
+</div>
+
+<div class="page-dialog" id="page-dialog2">
+    <div class="page-dialog-cnt">
+        <div class="page-dialog-detail">
+            <div class="ui-avatar-s">
+                <span class="pro-logo" style="background-image: url(../img/avatar.png)"></span>
+            </div>
+            <div class="result">
+                <div class="result-text" style="display: none">
+                    <h4>来自新版游戏中心礼包<br />红包抽奖</h4>
+                    <div class="prize">
+                        <em>5</em>Q币
+                    </div>
+                    <p class="sub-title">
+                        已存入手Q游戏中心我的仓库
+                    </p>
+                    <!--<div class="link">立即查看</div>-->
+                    <div class="other-text">打开手机QQ - 动态 - 游戏 - 我的仓库领取</div>
+                </div>
+
+                <div class="result-gift"  style="display: none" >
+                    <h4>来自新版游戏中心礼包</h4>
+                    <div class="prize">
+                        <div class="prize-info">
+                            <em>5</em>Q币
+                        </div>
+                        <div class="plus-wrap">+</div>
+                        <div class="prize-title">
+                            <h5>全民超神礼包</h5>
+                            <p>(钻石*8、坐骑、卷轴)</p>
+                        </div>
+                    </div>
+                    <div class="sub-title"> 已存入手Q游戏中心我的仓库</div>
+                    <div class="other-text">点击动态-游戏-我-我的仓库中可领取</div>
+                </div>
+
+                <div class="result-other">
+                    <h4>来自游戏中心公测红包群红包</h4>
+                    <div class="prize">
+                        <div class="prize-title">
+                            <h5>全民超神礼盒</h5>
+                            <p>(钻石*8、坐骑、卷轴)</p>
+                        </div>
+                    </div>
+                    <div class="sub-title"> 已存入手Q游戏中心我的仓库</div>
+                    <div class="other-text">点击动态-游戏-我-我的仓库中可领取</div>
+                </div>
+
+            </div>
+
+            <div class="page-dialog-close"></div>
+        </div>
+        <div class="page-dialog-bg">
+            <span style="background-image:url(../img/page4/hongbao_big.png)"></span>
+        </div>
+    </div>
+</div>
+
+<div class="icon-arrow"></div>
+
 
 <script src="../assets/js/zepto.min.js"></script>
 <script src="../assets/js/motion.js"></script>
