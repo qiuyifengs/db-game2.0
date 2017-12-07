@@ -1,1 +1,1 @@
-//////////////////// 页面入口function pageInit() {	// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);	$('.loading').remove();	$('.wrappgiter').addClass('show');}
+//////////////////// 页面入口function pageInit() {	// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);	$('.loading').remove();	$('.wrapper').addClass('show');}
