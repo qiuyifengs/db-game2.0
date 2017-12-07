@@ -11,43 +11,42 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <link rel="stylesheet" href="../assets/css/mtui.css">
     <script src="../assets/js/mtui.flexible.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<section class="g-flexview">
+<body ontouchstart>
+<div id="container" class="container">
+    <ul class="content">
+        <li class="page page1">
+            <div class="page-bd"></div>
+        </li>
+        <li class="page page4">
+            <div class="page-bd">
 
-    <header class="m-navbar">
-        <a href="asidebar.html" class="navbar-item"><i class="back-ico"></i></a>
-        <div class="navbar-center"><span class="navbar-title">个人中心</span></div>
-    </header>
-    <section class="g-scrollview">
+                <div class="page4-list">
+                    <div id="scroller">
 
 
 
+                    </div>
+                </div>
+                <div class="page-bottom ui-border-t show">
 
-        <footer class="m-tabbar tabbar-fixed">
-            <a href="javascript:;" class="tabbar-item tabbar-active">
-                <span class="tabbar-icon">
-                    <img src="../assets/images/personal/icon3.png" class="img" /></span>
-                <span class="tabbar-txt">下级明细</span>
-            </a>
-            <a href="javascript:;" class="tabbar-item">
-                <span class="tabbar-icon">
-                   <img src="../assets/images/personal/icon4.png" /></span>
-                </span>
-                <span class="tabbar-txt">联系客服</span>
-            </a>
-            <a href="javascript:;" class="tabbar-item">
-                <span class="tabbar-icon">
-                    <img src="../assets/images/personal/icon5.png" /></span>
-                </span>
-                <span class="tabbar-txt">我的团队</span>
-            </a>
-        </footer>
-    </section>
-</section>
+                </div>
+            </div>
 
-<script src="../assets/js/jquery-3.1.1.min.js"></script>
+        </li>
+    </ul>
+</div>
+
+<script src="../assets/js/zepto.min.js"></script>
+<script src="../assets/js/motion.js"></script>
+<script src="../assets/js/iscroll.js"></script>
+
+<script src="../assets/js/index.js"></script>
 
 </body>
 </html>
