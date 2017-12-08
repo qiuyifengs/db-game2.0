@@ -14,55 +14,30 @@
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.skinHTML5.css">
-
 </head>
 <body>
 
-
+<div style="padding: 5rem 1rem">
 <input id="range_55" value="" />
+    </div>
 
+</div>
 <script src="../assets/js/mtui.flexible.js"></script>
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
 <script src="../assets/js/ion.rangeSlider.min.js"></script>
 <script>
     $(document).ready(function () {
         var $range = $("#range_55");
-        var $disable_btn = $(".js-disable-55");
-        var $block_btn = $(".js-block-55");
-
-        var disabled = false;
-        var blocked = false;
         var slider;
 
         $range.ionRangeSlider({
             type: "single",
             min: 0,
             max: 50,
-            from: 25,
+            from: 0,
             grid: true
         });
 
-        slider = $range.data("ionRangeSlider");
-
-        $disable_btn.on("click", function () {
-            if (disabled) {
-                slider.update({"disable": false});
-                disabled = false;
-            } else {
-                slider.update({"disable": true});
-                disabled = true;
-            }
-        });
-
-        $block_btn.on("click", function () {
-            if (blocked) {
-                slider.update({"block": false});
-                blocked = false;
-            } else {
-                slider.update({"block": true});
-                blocked = true;
-            }
-        });
     });
 </script>
 </body>
