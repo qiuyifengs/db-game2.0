@@ -2,67 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>admin</title>
+    <link rel="stylesheet" href="test.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-    <style>
-
-        html {
-            -ms-touch-action: none;
-        }
-        #wrapper {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #ccc;
-            overflow: hidden;
-        }
-
-        #scroller {
-            position: absolute;
-            z-index: 1;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            width: 100%;
-            -webkit-transform: translateZ(0);
-            -moz-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            -o-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-text-size-adjust: none;
-            -moz-text-size-adjust: none;
-            -ms-text-size-adjust: none;
-            -o-text-size-adjust: none;
-            text-size-adjust: none;
-        }
-
-    </style>
-    <script src="../assets/js/iscroll.js"></script>
-    <script>
-        var myScroll;
-
-        function loaded () {
-            myScroll = new IScroll('#wrapper', {
-                useTransition: false
-            });
-        }
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-    </script>
 </head>
-<body onload="loaded()">
-
-<div id="wrapper">
-    <div id="scroller">
-        <div class="mt-layout mt-layout-has-sider">
+<body>
+    <div class="mt-layout mt-layout-has-sider">
     <div class="sider_Demo mt-layout-sider" style="flex: 0 0 256px; max-width: 256px; min-width: 256px; width: 256px;">
         <div class="mt-layout-sider-children">
             <div class="mt-logo">
@@ -247,7 +193,6 @@
         </div>
     </div>
 </div>
-    </div>
 </div>
 </body>
 </html>
