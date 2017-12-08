@@ -11,54 +11,108 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <!--<link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/mtui-common.css">-->
-    <link rel="stylesheet" href="../assets/css/normalize.css">
+
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.skinHTML5.css">
     <link rel="stylesheet" href="../assets/css/jquery.marquee.css">
+    <style>
+
+        html {
+            -ms-touch-action: none;
+        }
+        #wrapper {
+            position: absolute;
+            z-index: 1;
+            top: 45px;
+            bottom: 48px;
+            left: 0;
+            width: 100%;
+            background: #ccc;
+            overflow: hidden;
+        }
+
+        #scroller {
+            position: absolute;
+            z-index: 1;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            width: 100%;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+
+    </style>
 </head>
-<body>
+<body onload="loaded()">
 
-<ul id="marquee" class="marquee">
-    <li>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla.
-        Lorem ipsum dolor sit amet, consectetuer.</li>
-    <li>
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos hymenaeos. Fusce tincidunt adipiscing,massa. Class aptent taciti
-        sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-        Fusce tincidunt adipiscing,massa.
-    </li>
-    <li>
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
-    </li>
-    <li>
-        Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
-        ligula lacinia. Integer sed sapien, rutrum nec.
-    </li>
-    <li>
-        Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
-        sollicitudin nunc elit. Nullam erat neque, facilisis quis.
-    </li>
-    <li>
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Nam non eros sed facilisis, bibendum eu.
-    </li>
-</ul>
-<div style="padding: 4rem 1rem">
-    <input id="range_55" value="" />
-    <p id="txt"></p>
-    <button id="submit-1">自增</button>
-    <button id="submit-2">自减</button>
-    <p id="count"></p>
+
+<div id="wrapper">
+    <div id="scroller">
+        <ul id="marquee" class="marquee">
+            <li>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla.
+                Lorem ipsum dolor sit amet, consectetuer.</li>
+            <li>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos hymenaeos. Fusce tincidunt adipiscing,massa. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+                Fusce tincidunt adipiscing,massa.
+            </li>
+            <li>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
+            </li>
+            <li>
+                Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
+                ligula lacinia. Integer sed sapien, rutrum nec.
+            </li>
+            <li>
+                Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
+                sollicitudin nunc elit. Nullam erat neque, facilisis quis.
+            </li>
+            <li>
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Nam non eros sed facilisis, bibendum eu.
+            </li>
+        </ul>
+        <div style="padding: 4rem 1rem">
+            <input id="range_55" value="" />
+            <p id="txt"></p>
+            <button id="submit-1" style="width: 100px; height: 50px;">自增</button>
+            <button id="submit-2" style="width: 100px; height: 50px;">自减</button>
+            <p id="count"></p>
+        </div>
+    </div>
 </div>
 
-</div>
+
 <script src="../assets/js/mtui.flexible.js"></script>
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
 <script src="../assets/js/jquery.marquee.min.js"></script>
 <script src="../assets/js/ion.rangeSlider.min.js"></script>
+<script src="../assets/js/iscroll.js"></script>
 <script>
+
+    var myScroll;
+
+    function loaded () {
+        myScroll = new IScroll('#wrapper', {
+            useTransition: false
+        });
+    }
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
     $(document).ready(function () {
 
