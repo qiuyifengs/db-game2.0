@@ -183,7 +183,7 @@
                         <p class="mtui-media-box__desc">微信交易单号尾数 "1.3.5.7.9" 为单， "0.2.4.6.8" 为双</p>
                         <ul class="mtui-media-box__info">
                             <li class="mtui-media-box__info__meta">
-                                <a href="javascript:;" class="mtui-btn mtui-btn_default validation-btn">如何验证</a>
+                                <button data-modal="modal-1" class="mtui-btn mtui-btn_default validation-btn md-trigger">如何验证</button>
                             </li>
                         </ul>
                     </div>
@@ -204,15 +204,6 @@
                    <div class="mtui-cell__ft">单号尾数<span class="singleNumWs green">7</span></div>
                </div>
            </div>
-        </div>
-
-
-        <button class="md-trigger" data-modal="modal-1">Fade in &amp; Scale</button>
-        <div style="padding: 4rem 1rem">
-            <p id="txt"></p>
-            <button id="submit-1" style="width: 100px; height: 50px;">自增</button>
-            <button id="submit-2" style="width: 100px; height: 50px;">自减</button>
-            <p id="count"></p>
         </div>
     </div>
     <div class="mtui-footer mtui-footer_fixed-bottom">
@@ -264,7 +255,7 @@
 
     function loaded () {
         myScroll = new IScroll('#wrapper', {
-            useTransition: false
+            keyBindings: true
         });
     }
     document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
