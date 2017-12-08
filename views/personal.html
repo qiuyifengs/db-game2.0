@@ -13,30 +13,19 @@
     <script src="../assets/js/mtui.flexible.js"></script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/jquery.marquee.css">
+
 
 </head>
-<body>
+<body onload="loaded()">
 
-<div class="loading">
-    <div class="loadpage">
-        <div class="icon-title"></div>
-        <span class="loading-num">0%</span>
-        <div class="progress"><span></span></div>
-        <div class="spark-group">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+<div id="wrapper">
+    <div id="scroller">
+        <ul>
+            <li class="row">Row 1</li>
+        </ul>
     </div>
-</div>
-<section class="wrapper">
-    <div class="main" id="main">
-
-        <div class="mtui-cells">
+        <!--<div class="mtui-cells">
             <div class="mtui-cell">
                 <div class="mtui-cell__hd">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt="">
@@ -53,57 +42,80 @@
                 </div>
             </div>
             <a href="javascript:;" class="hb-logo"><img src="../assets/images/personal/hb_icon.png" /></a>
-        </div>
-        <div class="demo-rollnotice">
+        </div>-->
+    <!--    <div class="demo-rollnotice">
             <img src="http://st.360buyimg.com/m/images/index/jd-news-tit.png" />
-            <div class="mt-rollnotice">
-                <div class="mt-rollnotice-box mt-rollnotice-align-left">
-                    <div class="mt-rollnotice-item"><span style="color: rgb(255, 0, 0);">&nbsp;荐&nbsp;</span>京东服饰 早春新品低至7折</div>
+            <div class="mt-rollnotice" style="height: 15px;">
+                <div class="mt-rollnotice-box">
+                    <div class="mt-rollnotice-item">
+                        <span style="color: rgb(255, 0, 0);">&nbsp;荐&nbsp;</span>京东服饰 早春新品低至7折
+                    </div>
+                    <div class="mt-rollnotice-item">
+                        <span style="color: rgb(255, 0, 0);">&nbsp;荐&nbsp;</span>京东服饰 早春新品低至7折
+                    </div>
+                    <div class="mt-rollnotice-item">
+                        <span style="color: rgb(255, 0, 0);">&nbsp;荐&nbsp;</span>京东服饰 早春新品低至7折
+                    </div>
+                    <div class="mt-rollnotice-item">
+                        <span style="color: rgb(255, 0, 0);">&nbsp;荐&nbsp;</span>京东服饰 早春新品低至7折
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </div>-->
+        <ul id="marquee" class="marquee">
+            <li>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla.
+                Lorem ipsum dolor sit amet, consectetuer.</li>
+            <li>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos hymenaeos. Fusce tincidunt adipiscing,massa. Class aptent taciti
+                sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+                Fusce tincidunt adipiscing,massa.
+            </li>
+            <li>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
+            </li>
+            <li>
+                Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
+                ligula lacinia. Integer sed sapien, rutrum nec.
+            </li>
+            <li>
+                Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
+                sollicitudin nunc elit. Nullam erat neque, facilisis quis.
+            </li>
+            <li>
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Nam non eros sed facilisis, bibendum eu.
+            </li>
+        </ul>
     </div>
-    <div class="footer">
-        <button class="btn">开通超级会员</button>
-        <p>去QQ动漫逛逛</p>
-    </div>
-</section>
 
 
-<script src="../assets/js/zepto.min.js"></script>
-<script src="../assets/js/motion.js"></script>
+
+<script src="../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/jquery.marquee.min.js"></script>
+<script src="../assets/js/iscroll-infinite.js"></script>
 <script>
-    // 资源加载器
-    var resList = [
-        '../assets/images/personal/icon.png',
-        '../assets/images/personal/icon2.png',
-        '../assets/images/personal/icon3.png',
-        '../assets/images/personal/icon4.png',
-        '../assets/images/personal/icon5.png',
-        '../assets/images/personal/banner-gameJoin-bg.jpg',
-        '../assets/images/personal/banner-rule-bg.jpg',
-        '../assets/images/personal/hb_icon.png',
-        '../assets/images/personal/myTeam-rendering.png',
-        '../assets/images/personal/personal-header-bg.png',
-        '../assets/images/personal/personal-rendering.png'
-    ];
-    var $num = $('.loading-num'),
-    $progress = $('.progress span'),
-    loader = new mo.Loader(resList,
-    {
-        loadType: 1,
-        minTime: 80,
-        onLoading: function(count, total)
-        {
-            $num.text(Math.floor((count / total) * 100) + '%');
-            $progress.css('width', Math.floor((count / total) * 100) + '%');
-        },
-        onComplete: function(time)
-        {
-            pageInit(true); // 加载完成进入页面
-        }
-    });
+
+
+    var myScroll;
+
+    function loaded () {
+        myScroll = new IScroll('#wrapper', {
+            mouseWheel: true,
+            infiniteElements: '#scroller .row',
+            //infiniteLimit: 2000,
+            dataset: requestData,
+            dataFiller: updateContent,
+            cacheSize: 1000
+        });
+    }
+
+    $(function () {
+        $("#marquee").marquee();
+    })
+
 </script>
 
 

@@ -1,1 +1,0 @@
-//////////////////// 页面入口function pageInit() {	// document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);	$('.loading').remove();	$('.wrapper').addClass('show');}

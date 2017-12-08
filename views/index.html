@@ -14,9 +14,37 @@
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="../assets/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="../assets/css/jquery.marquee.css">
 </head>
 <body>
 
+<ul id="marquee" class="marquee">
+    <li>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla.
+        Lorem ipsum dolor sit amet, consectetuer.</li>
+    <li>
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos hymenaeos. Fusce tincidunt adipiscing,massa. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+        Fusce tincidunt adipiscing,massa.
+    </li>
+    <li>
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
+    </li>
+    <li>
+        Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
+        ligula lacinia. Integer sed sapien, rutrum nec.
+    </li>
+    <li>
+        Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
+        sollicitudin nunc elit. Nullam erat neque, facilisis quis.
+    </li>
+    <li>
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Nam non eros sed facilisis, bibendum eu.
+    </li>
+</ul>
 <div style="padding: 4rem 1rem">
     <input id="range_55" value="" />
     <p id="txt"></p>
@@ -28,10 +56,13 @@
 </div>
 <script src="../assets/js/mtui.flexible.js"></script>
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/jquery.marquee.min.js"></script>
 <script src="../assets/js/ion.rangeSlider.min.js"></script>
 <script>
 
     $(document).ready(function () {
+
+        $("#marquee").marquee();
         var $range = $("#range_55");
         var slider;
         var num = 0;
