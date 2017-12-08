@@ -9,7 +9,7 @@ ul.marquee {
 	overflow: hidden;
 
 	/* optional styles for appearance */
-	width: 6rem;
+	width: 100%;
 	height: 22px; /* height should be included to reserve visual space for the marquee */
 }
 

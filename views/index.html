@@ -30,6 +30,19 @@
         .lb-icon{
 
         }
+
+        .demo-selRange{
+            background-color: #fff;
+            padding: .1rem .3rem;
+            box-shadow: 0 1px 0px 0 rgba(0,0,0,0.30);
+            margin-top: 5px;
+        }
+        .sel_number{
+            padding: .1rem 1.4rem;
+            background-color: #fff;
+            font-size: 0;
+        }
+
     </style>
 
     <link rel="stylesheet" href="../assets/css/component.css">
@@ -56,31 +69,51 @@
                             sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
                             Fusce tincidunt adipiscing,massa.
                         </li>
-                        <li>
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                            inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
-                        </li>
-                        <li>
-                            Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
-                            ligula lacinia. Integer sed sapien, rutrum nec.
-                        </li>
-                        <li>
-                            Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
-                            sollicitudin nunc elit. Nullam erat neque, facilisis quis.
-                        </li>
-                        <li>
-                            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus. Nam non eros sed facilisis, bibendum eu.
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <div class="mtui-cells">
+            <div class="mtui-cell">
+                <div class="mtui-cell_hd">
+                    <img src="../assets/images/home/db_icon.png" style="width: 1.5rem" />
+                </div>
+                <div class="mtui-cell__bd">
+                    <p>余额：<span style="font-size: .5rem">5</span></p>
+                </div>
+                <div class="mtui-cell__ft">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_warn">充值</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-selRange">
+            <div class="mtui-flex sel_number">
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">-</a>
+                </div>
+                <div class="mtui-flex__item">
+                    <p style="font-size: .3rem">555</p>
+                </div>
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">+</a>
+                </div>
+            </div>
+            <div class="mtui-flex">
+                <div class="mtui-flex__item">
+                    <input id="range_55" value="" />
+                </div>
+                <div>
+                    <img src="../assets/images/home/hb_icon2.png" style="width: .6rem"/>
+                </div>
+            </div>
+
+        </div>
 
         <button class="md-trigger" data-modal="modal-1">Fade in &amp; Scale</button>
         <div style="padding: 4rem 1rem">
-            <input id="range_55" value="" />
+
 
             <p id="txt"></p>
             <button id="submit-1" style="width: 100px; height: 50px;">自增</button>
