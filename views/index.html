@@ -42,6 +42,15 @@
             background-color: #fff;
             font-size: 0;
         }
+        .button-area{
+            margin: 0 auto;
+            width: 60%;
+        }
+        .demo-action{
+            background-color: #fff;
+            box-shadow: 0 1px 0px 0 rgba(0,0,0,0.30);
+            margin-top: 5px;
+        }
 
     </style>
 
@@ -77,7 +86,7 @@
         <div class="mtui-cells">
             <div class="mtui-cell">
                 <div class="mtui-cell_hd">
-                    <img src="../assets/images/home/db_icon.png" style="width: 1.5rem" />
+                    <img src="../assets/images/home/db_icon.png" style="width: 1rem" />
                 </div>
                 <div class="mtui-cell__bd">
                     <p>余额：<span style="font-size: .5rem">5</span></p>
@@ -108,18 +117,40 @@
                     <img src="../assets/images/home/hb_icon2.png" style="width: .6rem"/>
                 </div>
             </div>
-
         </div>
+
+        <div class="demo-action">
+            <div class="mtui-flex">
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">猜大</a>
+                </div>
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">猜小</a>
+                </div>
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">猜单</a>
+                </div>
+                <div class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">猜双</a>
+                </div>
+            </div>
+            <div class="button-area">
+                <a href="javascript:;" class="mtui-btn"><img src="../assets/images/home/lb_btn.png" style="width: 80%" /></a>
+            </div>
+        </div>
+
+
 
         <button class="md-trigger" data-modal="modal-1">Fade in &amp; Scale</button>
         <div style="padding: 4rem 1rem">
-
-
             <p id="txt"></p>
             <button id="submit-1" style="width: 100px; height: 50px;">自增</button>
             <button id="submit-2" style="width: 100px; height: 50px;">自减</button>
             <p id="count"></p>
         </div>
+    </div>
+    <div class="mtui-footer mtui-footer_fixed-bottom">
+        <p class="mtui-footer__links"><a href="javascript:;" class="mtui-footer__link">返回首个人中心</a></p>
     </div>
 </div>
 
