@@ -20,8 +20,6 @@ ul.marquee li {
 	left: 0;
 	display: block;
 	white-space: nowrap; /* keep all text on a single line */
-
-	/* optional styles for appearance */
-	font: 14px Arial, Helvetica, sans-serif;
+	font: 0;
 	padding: 3px 5px;
 }
