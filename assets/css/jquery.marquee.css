@@ -11,9 +11,6 @@ ul.marquee {
 	/* optional styles for appearance */
 	width: 6rem;
 	height: 22px; /* height should be included to reserve visual space for the marquee */
-
-	background-color: #f2f2ff;
-	border: 1px solid #08084d;
 }
 
 ul.marquee li {
