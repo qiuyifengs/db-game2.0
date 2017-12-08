@@ -14,8 +14,8 @@
         #wrapper {
             position: absolute;
             z-index: 1;
-            top: 45px;
-            bottom: 48px;
+            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             background: #ccc;
@@ -59,7 +59,10 @@
     </script>
 </head>
 <body onload="loaded()">
-<div class="mt-layout mt-layout-has-sider">
+
+<div id="wrapper">
+    <div id="scroller">
+        <div class="mt-layout mt-layout-has-sider">
     <div class="sider_Demo mt-layout-sider" style="flex: 0 0 256px; max-width: 256px; min-width: 256px; width: 256px;">
         <div class="mt-layout-sider-children">
             <div class="mt-logo">
@@ -242,6 +245,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     </div>
 </div>
 </body>
