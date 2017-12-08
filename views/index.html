@@ -17,28 +17,73 @@
 </head>
 <body>
 
-<div style="padding: 5rem 1rem">
-<input id="range_55" value="" />
-    </div>
+<div style="padding: 4rem 1rem">
+    <input id="range_55" value="" />
+    <p id="txt"></p>
+    <button id="submit-1">自增</button>
+    <button id="submit-2">自减</button>
+    <p id="count"></p>
+</div>
 
 </div>
 <script src="../assets/js/mtui.flexible.js"></script>
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
 <script src="../assets/js/ion.rangeSlider.min.js"></script>
 <script>
+
     $(document).ready(function () {
         var $range = $("#range_55");
         var slider;
+        var num = 0;
 
-        $range.ionRangeSlider({
-            type: "single",
-            min: 0,
-            max: 50,
-            from: 0,
-            grid: true
-        });
+        $('#submit-1').on('click', function () {
+            if(num != 50){
+                num++
+            }else{
+                num = 50
+            }
+            // Call sliders update method with any params
+            slider.update({
+                min: 0,
+                max: 50,
+                from: num,
+            });
+            $('#count').text(num);
+        })
+        $('#submit-2').on('click', function () {
+            if(num != 0){
+                num--
+                console.log(num)
+            }else{
+                num = 0
+            }
+            // Call sliders update method with any params
+            slider.update({
+                min: 0,
+                max: 50,
+                from: num,
+            });
+            $('#count').text(num)
+        })
+        var create = function () {
+            $range.ionRangeSlider({
+                type: "single",
+                min: 0,
+                max: 50,
+                from: num,
+                grid: true,
+                onChange: function (data) {
+                    $('#txt').text("Value: " + data.from);
+                    num = data.from;
+                },
+            });
+            // Save slider instance to var
+            slider = $("#range_55").data("ionRangeSlider");
+        }
+        create();
 
     });
+
 </script>
 </body>
 </html>
