@@ -19,12 +19,47 @@
 </head>
 <body onload="loaded()">
 
+
 <div id="wrapper">
     <div id="scroller">
         <ul>
             <li class="row">Row 1</li>
+            <li class="row">Row 2</li>
+            <li class="row">Row 3</li>
+            <li class="row">Row 4</li>
+            <li class="row">Row 5</li>
+            <li class="row">Row 6</li>
+            <li class="row">Row 7</li>
+            <li class="row">Row 8</li>
+            <li class="row">Row 9</li>
+            <li class="row">Row 10</li>
+            <li class="row">Row 11</li>
+            <li class="row">Row 12</li>
+            <li class="row">Row 13</li>
+            <li class="row">Row 14</li>
+            <li class="row">Row 15</li>
+
+            <li class="row">Row 16</li>
+            <li class="row">Row 17</li>
+            <li class="row">Row 18</li>
+            <li class="row">Row 19</li>
+            <li class="row">Row 20</li>
+            <li class="row">Row 21</li>
+            <li class="row">Row 22</li>
+            <li class="row">Row 23</li>
+            <li class="row">Row 24</li>
+            <li class="row">Row 25</li>
+            <li class="row">Row 26</li>
+            <li class="row">Row 27</li>
+            <li class="row">Row 28</li>
+            <li class="row">Row 29</li>
+            <li class="row">Row 30</li>
         </ul>
     </div>
+</div>
+
+
+
         <!--<div class="mtui-cells">
             <div class="mtui-cell">
                 <div class="mtui-cell__hd">
@@ -62,35 +97,6 @@
                 </div>
             </div>
         </div>-->
-        <ul id="marquee" class="marquee">
-            <li>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed a nulla.
-                Lorem ipsum dolor sit amet, consectetuer.</li>
-            <li>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos hymenaeos. Fusce tincidunt adipiscing,massa. Class aptent taciti
-                sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-                Fusce tincidunt adipiscing,massa.
-            </li>
-            <li>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos hymenaeos. Fusce tincidunt adipiscing,massa.
-            </li>
-            <li>
-                Mauris ullamcorper euismod leo. Nulla congue tellus vitae ante at pede eu
-                ligula lacinia. Integer sed sapien, rutrum nec.
-            </li>
-            <li>
-                Aliquam erat volutpat. Fusce dolor. Vestibulum ornare congue turpis
-                sollicitudin nunc elit. Nullam erat neque, facilisis quis.
-            </li>
-            <li>
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Nam non eros sed facilisis, bibendum eu.
-            </li>
-        </ul>
-    </div>
-
 
 
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
@@ -111,6 +117,9 @@
             cacheSize: 1000
         });
     }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
 
     $(function () {
         $("#marquee").marquee();
