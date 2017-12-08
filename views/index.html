@@ -132,13 +132,13 @@
         <div class="demo-selRange">
             <div class="mtui-flex sel_number">
                 <div class="mtui-flex__item">
-                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">-</a>
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary" id="reduNum">-</a>
                 </div>
                 <div class="mtui-flex__item">
-                    <p style="font-size: .3rem">555</p>
+                    <p style="font-size: .3rem" id="showNum">0</p>
                 </div>
                 <div class="mtui-flex__item">
-                    <a href="javascript:;" class="mtui-btn mtui-btn_primary">+</a>
+                    <a href="javascript:;" class="mtui-btn mtui-btn_primary" id="addNum">+</a>
                 </div>
             </div>
             <div class="mtui-flex">
@@ -243,78 +243,13 @@
 <div class="md-overlay"></div><!-- the overlay element -->
 
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/fastclick.js"></script>
 <script src="../assets/js/mtui.flexible.js"></script>
 <script src="../assets/js/jquery.marquee.min.js"></script>
 <script src="../assets/js/ion.rangeSlider.min.js"></script>
 <script src="../assets/js/iscroll.js"></script>
 <script src="../assets/js/classie.js"></script>
 <script src="../assets/js/modalEffects.js"></script>
-<script>
-
-    var myScroll;
-
-    function loaded () {
-        myScroll = new IScroll('#wrapper', {
-            keyBindings: true
-        });
-    }
-    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-
-    $(document).ready(function () {
-
-     $("#marquee").marquee();
-        var $range = $("#range_55");
-        var slider;
-        var num = 0;
-
-        $('#submit-1').on('click', function () {
-            if(num != 50){
-                num++
-            }else{
-                num = 50
-            }
-            // Call sliders update method with any params
-            slider.update({
-                min: 0,
-                max: 50,
-                from: num,
-            });
-            $('#count').text(num);
-        })
-        $('#submit-2').on('click', function () {
-            if(num != 0){
-                num--
-                console.log(num)
-            }else{
-                num = 0
-            }
-            // Call sliders update method with any params
-            slider.update({
-                min: 0,
-                max: 50,
-                from: num,
-            });
-            $('#count').text(num)
-        })
-        var create = function () {
-            $range.ionRangeSlider({
-                type: "single",
-                min: 0,
-                max: 50,
-                from: num,
-                grid: true,
-                onChange: function (data) {
-                    $('#txt').text("Value: " + data.from);
-                    num = data.from;
-                },
-            });
-            // Save slider instance to var
-            slider = $("#range_55").data("ionRangeSlider");
-        }
-        create();
-
-    });
-
-</script>
+<script src="../assets/js/index.js"></script>
 </body>
 </html>
