@@ -1,53 +1,204 @@
-article,aside,blockquote,body,button,code,dd,dialog,div,dl,dt,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
-input,select,textarea{font-size:100%}
-table{border-collapse:collapse;border-spacing:0}
-fieldset,img{border:0}
-caption,th{text-align:left}
-h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}
-li,ol,ul{list-style:none}
-em,i{font-style:normal}
-del{text-decoration:line-through}
-address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}
-img{border:0;max-width:100%}
-img,input{vertical-align:middle}
-a:focus,input:focus{outline:0}
-a{color:#353d44;text-decoration:none}
-*{outline:0;-webkit-tap-highlight-color:transparent;-webkit-box-sizing:border-box}
-html{-webkit-text-size-adjust:none;overflow-y:scroll}
-body{min-width:320px;line-height:1.5;color:#353d44;background:#F4F4F4;width:100%}
-.w{margin:0 auto;max-width:15rem}
-html{font-size:21.33px}
-body{font-size:12px}
-@media screen and (min-width:320px){html{font-size:21.33px}
-    body{font-size:12px}
+/**
+ * Component:	Variables
+ * Description:	Define all variables
+*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
 }
-@media screen and (min-width:360px){html{font-size:24px}
-    body{font-size:12px}
+html,
+body {
+    height: 100%;
 }
-@media screen and (min-width:375px){html{font-size:25px}
-    body{font-size:12px}
+body {
+    background-color: #F5F5F5;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    font-family: arial, sans-serif;
 }
-@media screen and (min-width:384px){html{font-size:25.6px}
-    body{font-size:14px}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td,
+iframe {
+    margin: 0;
+    padding: 0;
 }
-@media screen and (min-width:400px){html{font-size:26.67px}
-    body{font-size:14px}
+img,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
-@media screen and (min-width:414px){html{font-size:27.6px}
-    body{font-size:14px}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
 }
-@media screen and (min-width:424px){html{font-size:28.27px}
-    body{font-size:14px}
+fieldset,
+img {
+    border: 0;
 }
-@media screen and (min-width:480px){html{font-size:32px}
-    body{font-size:15.36px}
+address,
+caption,
+cite,
+dfn,
+em,
+th,
+var,
+i,
+em {
+    font-style: normal;
+    font-weight: normal;
 }
-@media screen and (min-width:540px){html{font-size:36px}
-    body{font-size:17.28px}
+ol,
+ul {
+    list-style: none;
 }
-@media screen and (min-width:720px){html{font-size:48px}
-    body{font-size:23.04px}
+a {
+    text-decoration: none;
+    color: inherit;
 }
-@media screen and (min-width:750px){html{font-size:50px}
-    body{font-size:24px}
+a:hover {
+    text-decoration: none;
+}
+a,
+label,
+button,
+input,
+select {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select,
+button {
+    font: 100% tahoma, \5b8b\4f53, arial;
+    vertical-align: baseline;
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+input[type=checkbox],
+input[type=radio] {
+    vertical-align: middle;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    margin: 0;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+textarea {
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    overflow: auto;
+    resize: none;
+    font: 100% tahoma, \5b8b\4f53, arial;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.g-view {
+    margin: 0 auto;
+    max-width: 750px;
+    min-width: 300px;
+}
+.g-view:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.9rem;
+}
+.g-view:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+}
+.g-flexview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 750px;
+    min-width: 300px;
+}
+.g-scrollview {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin-bottom: -1px;
+}
+.g-scrollview:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+}
+.ios .g-scrollview {
+    margin-top: 1px;
+}
+.hairline .g-scrollview {
+    margin-top: 0.5px;
+}
+.g-fix-ios-overflow-scrolling-bug {
+    -webkit-overflow-scrolling: auto;
 }

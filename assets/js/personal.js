@@ -14,8 +14,6 @@ function loaded () {
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false); // 禁止屏幕滚动
 
 $(document).ready(function () {
-
-
     // Tab
     var swiper3 = new Swiper('.swiper-container3', {
         pagination: '.rankingTab-ul',

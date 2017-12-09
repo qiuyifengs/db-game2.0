@@ -10,6 +10,7 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="msapplication-tap-highlight" content="no" />
 
+    <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/jquery.marquee.css">
     <link rel="stylesheet" href="../assets/css/component.css">
     <link rel="stylesheet" href="../assets/css/component-tab.css">
@@ -26,6 +27,9 @@
             padding: .2rem 0;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
             margin-bottom: 4px;
+        }
+        .headImg{
+            display: inline-block;
         }
         .hbImg{
             width: 1.3rem;
@@ -48,7 +52,7 @@
             margin: 0; padding: 0; list-style-type: none;
         }
         .item-link{
-            padding: .2rem 0;
+            padding: .3rem 0;
             -webkit-box-align: center;
             -webkit-align-items: center;
             align-items: center;
@@ -79,6 +83,8 @@
         .rankingHead{
             width: 1.2rem;
             border-radius: 50%;
+            display: inline-block;
+            margin: .1rem 0;
         }
 
         .demo-rankingInfo{
@@ -130,6 +136,7 @@
         .rank-userImg img{
             width: .5rem;
             border-radius: 50%;
+            display: inline-block;
         }
         .rank-userImg p{
             margin: 0;
@@ -187,6 +194,17 @@
             color: #000000;
             background-color: #F8F8F8;
         }
+        .btn-close{
+            position: absolute;
+            display: block;
+            right: 1px;
+            width: 32px;
+            height: 32px;
+            top: -35px;
+            background-image: url(../assets/images/personal/TB1t4cwKVXXXXbjXXXXXXXXXXXX-64-64.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
 
 
     </style>
@@ -224,7 +242,7 @@
                 <div class="mtui-flex__item">
                     <p>余额：5.00</p>
                     <p>佣金：12.0</p>
-                    <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">充值</a>
+                    <a href="pay.html" class="mtui-btn mtui-btn_mini mtui-btn_default" style="margin-top: .3rem">充值</a>
                 </div>
                 <div class="mtui-flex__item">
                     <a href="javascript:;"><img class="hbImg" src="../assets/images/personal/hb_icon.png"/></a>
@@ -278,7 +296,7 @@
                 <img src="../assets/images/personal/icon4.png" alt="" class="mtui-tabbar__icon">
                 <p class="mtui-tabbar__label">联系客服</p>
             </a>
-            <a href="javascript:;" class="mtui-tabbar__item">
+            <a href="myTeam.html" class="mtui-tabbar__item">
                 <img src="../assets/images/personal/icon5.png" alt="" class="mtui-tabbar__icon">
                 <p class="mtui-tabbar__label">我的团队</p>
             </a>
@@ -301,7 +319,7 @@
                     <a href="javascript:;" class="mtui-btn mtui-btn_mini">昨日榜</a>
                 </li>
             </ul>
-
+            <i class="btn-close md-close"></i>
             <div class="swiper-container swiper-container3">
                         <div class="rankingTab"><ul class="rankingTab-ul"></ul></div>
                         <div class="swiper-wrapper" style="margin-top: -.8rem">
