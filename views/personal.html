@@ -134,16 +134,25 @@
         .rank-userImg p{
             margin: 0;
         }
-        .Wrapper-rankingData{
+        #Wrapper-rankingData-1{
             position: absolute;
             z-index: 1;
             top: .5rem;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(204, 204, 204, 0.32);
             overflow: hidden;
-            height: 6.2rem;
+            height: 6.28rem;
+        }
+        #Wrapper-rankingData-2{
+            position: absolute;
+            z-index: 1;
+            top: .5rem;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 6.28rem;
         }
         .rankingData_scroll{
             position: absolute;
@@ -165,6 +174,12 @@
             -ms-text-size-adjust: none;
             -o-text-size-adjust: none;
             text-size-adjust: none;
+        }
+        .rankingData_scroll > div:nth-child(odd){
+            background-color: rgb(66, 26, 54);
+        }
+        .rankingData_scroll > div:nth-child(even){
+            background-color: rgb(91, 38, 51);
         }
         .demo-rankingData{
             position: relative;
@@ -323,7 +338,7 @@
                                     <span>获得奖励</span>
                                 </div>
                             </div>
-                            <div class="Wrapper-rankingData">
+                            <div id="Wrapper-rankingData-1">
                                 <div class="rankingData_scroll">
                                     <div class="mtui-flex rankingColumn_data">
                                         <div class="mtui-flex__item">
@@ -547,7 +562,7 @@
                                     <span>获得奖励</span>
                                 </div>
                             </div>
-                            <div class="Wrapper-rankingData">
+                            <div id="Wrapper-rankingData-2">
                                 <div class="rankingData_scroll">
                                     <div class="mtui-flex rankingColumn_data">
                                         <div class="mtui-flex__item">

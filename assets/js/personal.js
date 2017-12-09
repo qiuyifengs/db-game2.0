@@ -1,10 +1,13 @@
-var myScroll,rankScroll
+var myScroll,rankScroll_1, rankScroll_2
 
 function loaded () {
     myScroll = new IScroll('#wrapper', {
         keyBindings: true
     });
-    rankScroll = new IScroll('.Wrapper-rankingData', {
+    rankScroll_1 = new IScroll('#Wrapper-rankingData-1', {
+        keyBIndings: true
+    })
+    rankScroll_2 = new IScroll('#Wrapper-rankingData-2', {
         keyBIndings: true
     })
 }
