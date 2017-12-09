@@ -1,9 +1,12 @@
-var myScroll;
+var myScroll,rankScroll
 
 function loaded () {
     myScroll = new IScroll('#wrapper', {
         keyBindings: true
     });
+    rankScroll = new IScroll('.Wrapper-rankingData', {
+        keyBIndings: true
+    })
 }
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
