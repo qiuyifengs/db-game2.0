@@ -134,17 +134,7 @@
         .rank-userImg p{
             margin: 0;
         }
-        #Wrapper-rankingData-1{
-            position: absolute;
-            z-index: 1;
-            top: .5rem;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            height: 6.28rem;
-        }
-        #Wrapper-rankingData-2{
+        .Wrapper-rankingData{
             position: absolute;
             z-index: 1;
             top: .5rem;
@@ -184,6 +174,21 @@
         .demo-rankingData{
             position: relative;
         }
+        .tab{
+            transform: translateY(-.8rem);
+            position: absolute;
+            width: 100%;
+        }
+        .tab > li .mtui-btn{
+            background-color: rgb(125, 54, 49);
+            color: rgb(229, 170, 168);
+        }
+        .tab > li .mtui-btn:hover, .tab > li .mtui-btn:active {
+            color: #000000;
+            background-color: #F8F8F8;
+        }
+
+
     </style>
 
 
@@ -223,7 +228,7 @@
                 </div>
                 <div class="mtui-flex__item">
                     <a href="javascript:;"><img class="hbImg" src="../assets/images/personal/hb_icon.png"/></a>
-                    <a href="javascript:;" data-modal="modal-1" style="margin-top: 1rem" class="mtui-btn mtui-btn_mini mtui-btn_default_reverse md-trigger">排行版</a>
+                    <a href="javascript:;" data-modal="modal-1" style="margin: 1rem 0 .1rem" class="mtui-btn mtui-btn_mini mtui-btn_default_reverse md-trigger">排行版</a>
                     <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default_reverse">兑换</a>
                 </div>
             </div>
@@ -288,464 +293,472 @@
     <div class="md-content ranking-bg">
         <div>
 
+            <ul class="mtui-flex tab">
+                <li class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_mini">今日榜</a>
+                </li>
+                <li class="mtui-flex__item">
+                    <a href="javascript:;" class="mtui-btn mtui-btn_mini">昨日榜</a>
+                </li>
+            </ul>
+
             <div class="swiper-container swiper-container3">
-                <div class="rankingTab"><ul class="rankingTab-ul"></ul></div>
-                <div class="swiper-wrapper" style="margin-top: -.8rem">
-                    <div class="swiper-slide">
+                        <div class="rankingTab"><ul class="rankingTab-ul"></ul></div>
+                        <div class="swiper-wrapper" style="margin-top: -.8rem">
+                            <div class="swiper-slide">
 
-                        <div class="mtui-flex">
-                            <div class="mtui-flex__item">
-                                <h3 class="rankingTit">今日游戏赚金</h3>
-                                <p class="rankingMoney">0</p>
+                                <div class="mtui-flex">
+                                    <div class="mtui-flex__item">
+                                        <h3 class="rankingTit">今日游戏赚金</h3>
+                                        <p class="rankingMoney">0</p>
+                                    </div>
+                                    <div class="mtui-flex__item">
+                                        <img src="../assets/images/personal/icon.png" class="rankingHead"/>
+                                    </div>
+                                    <div class="mtui-flex__item">
+                                        <h3 class="rankingTit">本周累计佣金</h3>
+                                        <p class="rankingMoney">0</p>
+                                    </div>
+                                </div>
+
+                                <div class="demo-rankingInfo">
+                                    <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
+                                    <div class="mt-rollnotice reset-rankingRollnotice">
+                                        <div class="mt-rollnotice-box">
+                                            <ul id="marquee2" class="marquee">
+                                                <li>
+                                                    用户ID qyf1 获利100元  用户ID qyf 获利100元</li>
+                                                <li>
+                                                    用户ID qyf2 获利100元  用户ID qyf 获利100元
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="getReward">领取奖励</a>
+                                </div>
+
+                                <div class="demo-rankingData">
+                                    <div class="mtui-flex rankingColumn">
+                                        <div class="mtui-flex__item">
+                                            <span>排名</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>竞猜达人</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>积累中奖</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>获得奖励</span>
+                                        </div>
+                                    </div>
+                                    <div id="Wrapper-rankingData-1" class="Wrapper-rankingData">
+                                        <div class="rankingData_scroll">
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">1</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">2</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">3</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">4</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">5</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">1</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">2</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">3</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">4</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">5</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="mtui-flex__item">
-                                <img src="../assets/images/personal/icon.png" class="rankingHead"/>
-                            </div>
-                            <div class="mtui-flex__item">
-                                <h3 class="rankingTit">本周累计佣金</h3>
-                                <p class="rankingMoney">0</p>
+                            <div class="swiper-slide">
+
+                                <div class="mtui-flex">
+                                    <div class="mtui-flex__item">
+                                        <h3 class="rankingTit">今日游戏赚金</h3>
+                                        <p class="rankingMoney">0</p>
+                                    </div>
+                                    <div class="mtui-flex__item">
+                                        <img src="../assets/images/personal/icon.png" class="rankingHead"/>
+                                    </div>
+                                    <div class="mtui-flex__item">
+                                        <h3 class="rankingTit">本周累计佣金</h3>
+                                        <p class="rankingMoney">0</p>
+                                    </div>
+                                </div>
+
+                                <div class="demo-rankingInfo">
+                                    <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
+                                    <div class="mt-rollnotice reset-rankingRollnotice">
+                                        <div class="mt-rollnotice-box">
+                                            <ul id="marquee3" class="marquee">
+                                                <li>
+                                                    用户ID qyf1 获利100元  用户ID qyf 获利100元</li>
+                                                <li>
+                                                    用户ID qyf2 获利100元  用户ID qyf 获利100元
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="getReward">领取奖励</a>
+                                </div>
+
+                                <div class="demo-rankingData">
+                                    <div class="mtui-flex rankingColumn">
+                                        <div class="mtui-flex__item">
+                                            <span>排名</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>竞猜达人</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>积累中奖</span>
+                                        </div>
+                                        <div class="mtui-flex__item">
+                                            <span>获得奖励</span>
+                                        </div>
+                                    </div>
+                                    <div id="Wrapper-rankingData-2" class="Wrapper-rankingData">
+                                        <div class="rankingData_scroll">
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">1</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">2</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">3</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">4</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">5</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">1</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">2</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">3</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">4</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                            <div class="mtui-flex rankingColumn_data">
+                                                <div class="mtui-flex__item">
+                                                    <span class="rank-id">5</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <figure class="rank-userImg">
+                                                        <img src="../assets/images/personal/icon.png"/>
+                                                        <p>ID: xnusw</p>
+                                                    </figure>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>13123</span>
+                                                </div>
+                                                <div class="mtui-flex__item">
+                                                    <span>2312312</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                        <div class="demo-rankingInfo">
-                            <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
-                            <div class="mt-rollnotice reset-rankingRollnotice">
-                                <div class="mt-rollnotice-box">
-                                    <ul id="marquee2" class="marquee">
-                                        <li>
-                                            用户ID qyf1 获利100元  用户ID qyf 获利100元</li>
-                                        <li>
-                                            用户ID qyf2 获利100元  用户ID qyf 获利100元
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="javascript:;" class="getReward">领取奖励</a>
-                        </div>
-
-                        <div class="demo-rankingData">
-                            <div class="mtui-flex rankingColumn">
-                                <div class="mtui-flex__item">
-                                    <span>排名</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>竞猜达人</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>积累中奖</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>获得奖励</span>
-                                </div>
-                            </div>
-                            <div id="Wrapper-rankingData-1">
-                                <div class="rankingData_scroll">
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">1</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">2</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">3</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">4</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">5</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">1</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">2</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">3</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">4</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">5</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                    <div class="swiper-slide">
 
-                        <div class="mtui-flex">
-                            <div class="mtui-flex__item">
-                                <h3 class="rankingTit">今日游戏赚金</h3>
-                                <p class="rankingMoney">0</p>
-                            </div>
-                            <div class="mtui-flex__item">
-                                <img src="../assets/images/personal/icon.png" class="rankingHead"/>
-                            </div>
-                            <div class="mtui-flex__item">
-                                <h3 class="rankingTit">本周累计佣金</h3>
-                                <p class="rankingMoney">0</p>
-                            </div>
-                        </div>
-
-                        <div class="demo-rankingInfo">
-                            <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
-                            <div class="mt-rollnotice reset-rankingRollnotice">
-                                <div class="mt-rollnotice-box">
-                                    <ul id="marquee2" class="marquee">
-                                        <li>
-                                            用户ID qyf1 获利100元  用户ID qyf 获利100元</li>
-                                        <li>
-                                            用户ID qyf2 获利100元  用户ID qyf 获利100元
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <a href="javascript:;" class="getReward">领取奖励</a>
-                        </div>
-
-                        <div class="demo-rankingData">
-                            <div class="mtui-flex rankingColumn">
-                                <div class="mtui-flex__item">
-                                    <span>排名</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>竞猜达人</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>积累中奖</span>
-                                </div>
-                                <div class="mtui-flex__item">
-                                    <span>获得奖励</span>
-                                </div>
-                            </div>
-                            <div id="Wrapper-rankingData-2">
-                                <div class="rankingData_scroll">
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">1</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">2</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">3</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">4</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">5</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">1</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">2</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">3</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">4</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                    <div class="mtui-flex rankingColumn_data">
-                                        <div class="mtui-flex__item">
-                                            <span class="rank-id">5</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <figure class="rank-userImg">
-                                                <img src="../assets/images/personal/icon.png"/>
-                                                <p>ID: xnusw</p>
-                                            </figure>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>13123</span>
-                                        </div>
-                                        <div class="mtui-flex__item">
-                                            <span>2312312</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
 
            <!-- <button class="md-close">Close me!</button>-->
-
-        </div>
 
     </div>
 
@@ -762,23 +775,6 @@
 <script src="../assets/js/modalEffects.js"></script>
 <script src="../assets/js/swiper.min.js"></script>
 <script src="../assets/js/personal.js"></script>
-<script>
-    $(function () {
 
-        var swiper3 = new Swiper('.swiper-container3', {
-            pagination: '.rankingTab-ul',
-            paginationClickable: true,
-            paginationBulletRender: function (index, className) {
-                switch (index) {
-                    case 0: name='赚金排行榜';break;
-                    case 1: name='佣金排行榜';break;
-                    default: name='';
-                }
-                return '<li class="' + className + '">' + name + '</li>';
-            }
-        });
-
-    })
-</script>
 </body>
 </html>
