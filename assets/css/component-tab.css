@@ -1,12 +1,12 @@
 .swiper-container {
-    height: 6.8rem;
+    height: 10rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 .rankingTab {
     position: relative;
     z-index: 999;
-    top: 6rem;
+    top: 9.2rem;
 }
 .rankingTab .swiper-pagination-bullet { text-align: center; border-radius: 0; opacity: 1; }
 .rankingTab ul { display: -webkit-box; }
