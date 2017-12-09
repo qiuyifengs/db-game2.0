@@ -18,6 +18,49 @@
     <style>
 
 
+        .headBg{
+            background: url(../assets/images/personal/personal-header-bg.png) no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            padding: .2rem 0;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+            margin-bottom: 4px;
+        }
+        .hbImg{
+            width: 1.3rem;
+            position: absolute;
+            top: 0;
+            right: .5rem;
+        }
+        .banner-rule{
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+        .banner-rule img{
+            width: 100%;
+        }
+        .db-link{
+
+        }
+        ul,li{
+            margin: 0; padding: 0; list-style-type: none;
+        }
+        .item-link{
+            padding: .2rem 0;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-transition: .3s;
+            transition: .3s;
+            font-size: 0.3rem;
+            background-color: #fff;
+            margin-top: .1rem;
+        }
+        .item-link img{
+            width: .8rem;
+            margin-right: .8rem;
+        }
     </style>
 
 
@@ -42,12 +85,80 @@
 <div id="wrapper" style="top: .9rem; bottom: .9rem">
     <div id="scroller">
 
+        <header class="headBg">
+            <div class="mtui-flex" style="font-size: .3rem; color: #fff">
+                <div class="mtui-flex__item">
+                    <figure class="headImg">
+                        <img src="../assets/images/personal/icon2.png" style="width: 1.3rem; border-radius: 50%;"/>
+                    </figure>
+                    <p>ID：1579</p>
+                </div>
+                <div class="mtui-flex__item">
+                    <p>余额：5.00</p>
+                    <p>佣金：12.0</p>
+                    <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">充值</a>
+                </div>
+                <div class="mtui-flex__item">
+                    <a href="javascript:;"><img class="hbImg" src="../assets/images/personal/hb_icon.png"/></a>
+                    <a href="javascript:;" style="margin-top: 1rem" class="mtui-btn mtui-btn_mini mtui-btn_default_reverse">排行版</a>
+                    <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default_reverse">兑换</a>
+                </div>
+            </div>
+        </header>
+        <figure class="banner-rule">
+            <img src="../assets/images/home/banner.png" />
+        </figure>
+        <div class="box">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="gameJoinImage">
+                        <img src="../assets/images/personal/banner-gameJoin-bg.jpg"/>
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <div class="mtui-flex item-link">
+                                    <p class="mtui-flex__item">推广赚钱</p>
+                                    <img src="../assets/images/personal/icon.png"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtui-flex item-link">
+                                    <p class="mtui-flex__item">交易明细</p>
+                                    <img src="../assets/images/personal/icon2.png"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
     </div>
-    <div class="mtui-footer mtui-footer_fixed-bottom">
+    <!--<div class="mtui-footer mtui-footer_fixed-bottom">
         <p class="mtui-footer__links"><a href="javascript:;" class="mtui-footer__link">个人中心</a></p>
-    </div>
+    </div>-->
+    <footer>
+        <div class="mtui-tabbar">
+            <a href="javascript:;" class="mtui-tabbar__item">
+                <img src="../assets/images/personal/icon3.png" alt="" class="mtui-tabbar__icon">
+                <p class="mtui-tabbar__label">下级明细</p>
+            </a>
+            <a href="javascript:;" class="mtui-tabbar__item">
+                <img src="../assets/images/personal/icon4.png" alt="" class="mtui-tabbar__icon">
+                <p class="mtui-tabbar__label">联系客服</p>
+            </a>
+            <a href="javascript:;" class="mtui-tabbar__item">
+                <img src="../assets/images/personal/icon5.png" alt="" class="mtui-tabbar__icon">
+                <p class="mtui-tabbar__label">我的团队</p>
+            </a>
+        </div>
+    </footer>
+
 </div>
 
 
