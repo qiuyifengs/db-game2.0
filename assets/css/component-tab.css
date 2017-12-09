@@ -1,6 +1,7 @@
 .swiper-container {
-    height: 7rem;
-    border: 1px solid;
+    height: 6.8rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .rankingTab {
     position: relative;
@@ -9,10 +10,17 @@
 }
 .rankingTab .swiper-pagination-bullet { text-align: center; border-radius: 0; opacity: 1; }
 .rankingTab ul { display: -webkit-box; }
-.rankingTab li { display: block; background-color: #ccc; overflow: hidden; box-flex: 1; -moz-box-flex: 1; -webkit-box-flex: 1;
-    height: .8rem; line-height: .8rem; position: relative; font-size: 15px; }
-.rankingTab li:before { position: absolute; top: -4px; right: auto; bottom: 0; left: 0; z-index: 1; display: block; width: 100%; height: 1px; content: ''; background-color: #dcdcdc; -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%; -webkit-transform: scaleY(.5) }
-.rankingTab .swiper-pagination-bullet-active { color: #1F9FEF; }
+.rankingTab li { display: block; overflow: hidden; box-flex: 1;
+    -moz-box-flex: 1; -webkit-box-flex: 1;
+    height: .8rem; line-height: .8rem; position: relative; font-size: 15px;
+    background-color: rgb(66, 26, 54);
+}
+.rankingTab li:before { position: absolute; top: -4px; right: auto; bottom: 0;
+    left: 0; z-index: 1; display: block; width: 100%; height: 1px; content: '';
+    background-color: #dcdcdc; -webkit-transform-origin: 50% 100%; transform-origin: 50% 100%;
+    -webkit-transform: scaleY(.5) }
+.rankingTab .swiper-pagination-bullet-active { color: #fff; background-color: #813732 }
+
 /*.my-pagination .swiper-pagination-bullet-active:before { opacity: 1; background-color: #FD780D; height: 6px; }*/
 
 .my-pagination_custom {

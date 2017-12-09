@@ -65,13 +65,16 @@
 
         .rankingTit{
             font-size: .3rem;
-            color: #fff;
+            color: rgb(229, 170, 168);
+            font-weight: 400;
         }
         .rankingMoney{
-            background-color: #c54343;
+            background-color: #311214;
             border-radius: 10px;
             width: 80%;
             margin: 0 auto .2rem;
+            color: rgb(229, 170, 168);
+            font-size: .25rem;
         }
         .rankingHead{
             width: 1.2rem;
@@ -87,11 +90,49 @@
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            background-color: #ca6363;
+            background-color: rgb(61, 22, 52);
             padding: .1rem;
         }
         .demo-rankingInfo img{
             height: .3rem;
+        }
+        .reset-rankingRollnotice{
+            background-color: transparent;
+            color: rgb(229, 170, 168);
+            font-size: .25rem
+        }
+        .getReward{
+            font-size: .25rem;
+            background-color: rgb(118, 50, 49);
+            color: #fff;
+            display: inline-block;
+            width: 2rem;
+            line-height: 2.5;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 2px;
+        }
+        .rankingColumn{
+            background-color: rgb(125, 53, 50);
+            padding: .1rem;
+            font-size: .25rem;
+        }
+        .rankingColumn_data{
+            padding: .1rem;
+            font-size: .25rem;
+        }
+        .rank-id{
+            font-size: .7rem;
+        }
+        .rank-userImg{
+            margin: 0;
+        }
+        .rank-userImg img{
+            width: .5rem;
+            border-radius: 50%;
+        }
+        .rank-userImg p{
+            margin: 0;
         }
     </style>
 
@@ -196,39 +237,127 @@
 
     <div class="md-content ranking-bg">
         <div>
-            <div class="mtui-flex">
-                <div class="mtui-flex__item">
-                    <h3 class="rankingTit">今日游戏赚金</h3>
-                    <p class="rankingMoney">0</p>
-                </div>
-                <div class="mtui-flex__item">
-                    <img src="../assets/images/personal/icon.png" class="rankingHead"/>
-                </div>
-                <div class="mtui-flex__item">
-                    <h3 class="rankingTit">本周累计佣金</h3>
-                    <p class="rankingMoney">0</p>
-                </div>
-            </div>
-
-            <div class="demo-rankingInfo">
-                <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
-                <div class="mt-rollnotice" style="background-color: transparent">
-                    <div class="mt-rollnotice-box">
-                        <ul id="marquee2" class="marquee">
-                            <li>
-                                Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer.</li>
-                            <li>
-                                用户ID qyf 获利100元  用户ID qyf 获利100元
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
             <div class="swiper-container swiper-container3">
                 <div class="rankingTab"><ul class="rankingTab-ul"></ul></div>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="border: 1xpx solid #fff;">1
+                    <div class="swiper-slide" style="border: 1xpx solid #fff;">
+
+                        <div class="mtui-flex">
+                            <div class="mtui-flex__item">
+                                <h3 class="rankingTit">今日游戏赚金</h3>
+                                <p class="rankingMoney">0</p>
+                            </div>
+                            <div class="mtui-flex__item">
+                                <img src="../assets/images/personal/icon.png" class="rankingHead"/>
+                            </div>
+                            <div class="mtui-flex__item">
+                                <h3 class="rankingTit">本周累计佣金</h3>
+                                <p class="rankingMoney">0</p>
+                            </div>
+                        </div>
+
+                        <div class="demo-rankingInfo">
+                            <img src="../assets/images/ranking/laba_icon.png" class="laba_icon">
+                            <div class="mt-rollnotice reset-rankingRollnotice">
+                                <div class="mt-rollnotice-box">
+                                    <ul id="marquee2" class="marquee">
+                                        <li>
+                                            用户ID qyf1 获利100元  用户ID qyf 获利100元</li>
+                                        <li>
+                                            用户ID qyf2 获利100元  用户ID qyf 获利100元
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="getReward">领取奖励</a>
+                        </div>
+
+                        <div class="demo-rankingData">
+                            <div class="mtui-flex rankingColumn">
+                                <div class="mtui-flex__item">
+                                    <span>排名</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>竞猜达人</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>积累中奖</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>获得奖励</span>
+                                </div>
+                            </div>
+                            <div class="mtui-flex rankingColumn_data">
+                                <div class="mtui-flex__item">
+                                    <span class="rank-id">1</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <figure class="rank-userImg">
+                                        <img src="../assets/images/personal/icon.png"/>
+                                        <p>ID: xnusw</p>
+                                    </figure>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>13123</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>2312312</span>
+                                </div>
+                            </div>
+                            <div class="mtui-flex rankingColumn_data">
+                                <div class="mtui-flex__item">
+                                    <span class="rank-id">1</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <figure class="rank-userImg">
+                                        <img src="../assets/images/personal/icon.png"/>
+                                        <p>ID: xnusw</p>
+                                    </figure>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>13123</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>2312312</span>
+                                </div>
+                            </div>
+                            <div class="mtui-flex rankingColumn_data">
+                                <div class="mtui-flex__item">
+                                    <span class="rank-id">1</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <figure class="rank-userImg">
+                                        <img src="../assets/images/personal/icon.png"/>
+                                        <p>ID: xnusw</p>
+                                    </figure>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>13123</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>2312312</span>
+                                </div>
+                            </div>
+                            <div class="mtui-flex rankingColumn_data">
+                                <div class="mtui-flex__item">
+                                    <span class="rank-id">1</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <figure class="rank-userImg">
+                                        <img src="../assets/images/personal/icon.png"/>
+                                        <p>ID: xnusw</p>
+                                    </figure>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>13123</span>
+                                </div>
+                                <div class="mtui-flex__item">
+                                    <span>2312312</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="swiper-slide" style="border: 1xpx solid #fff;">2
                     </div>
