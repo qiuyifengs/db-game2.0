@@ -281,8 +281,8 @@ table {
     border-radius: 3px;
 }
 .btn-hollow {
-    background-color: #FFF;
-    color: #454545;
+    background-color: #bd9d64;
+    color: #fff;
 }
 .btn-hollow:active {
     background-color: #e6e6e6;
@@ -472,6 +472,7 @@ input[type="submit"].btn-hollow {
     display: inline-block;
     font-size: 0.3rem;
 }
+
 
 
 

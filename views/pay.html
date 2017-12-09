@@ -8,28 +8,111 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/mtui.css">
-    <script src="../assets/js/mtui.flexible.js"></script>
+
+    <style>
+        .moeney{
+            background: linear-gradient(#f93354, #ef4a3d);
+            text-align: center;
+            padding: 1rem 0;
+            color: #fff;
+            font-size: .7rem;
+        }
+        .payMonery{
+            -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+            padding: 2.67%;
+            position: relative;
+            z-index: 0;
+            display: block;
+            overflow: hidden;
+        }
+        .payMonery .item{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 30%;
+            float: left;
+            position: relative;
+            border: 2px solid #a19678;
+            margin: .1rem;
+            border-radius: 2px;
+        }
+        .mtui-btn{
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 14px;
+            padding-right: 14px;
+            box-sizing: border-box;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: #FFFFFF;
+            line-height: 2.55555556;
+            border-radius: 5px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            overflow: hidden;
+        }
+        .tip_txt{
+            color: #fff;
+            text-align: center;
+            font-size: .3rem;
+            margin: .5rem auto .1rem;
+        }
+        .payMonery .active{
+            background-color: #dd3b3a;
+        }
+
+    </style>
 </head>
-<body style="background-color: #7b20c5">
+<body style="background-color: #3c3839">
 
 <section class="g-flexview">
-    <header class="m-navbar">
-        <a href="asidebar.html" class="navbar-item"><i class="back-ico"></i></a>
-        <div class="navbar-center"><span class="navbar-title">充值中心</span></div>
-    </header>
 
     <section class="g-scrollview">
 
-        <figure style="height: 3rem; border: 5px solid #fff">
+        <header class="moeney">
+            <p>488.00</p>
+            <p style="font-size: .3rem">当前余额</p>
+        </header>
 
-        </figure>
-
-        <div class="m-gridstitle">人名币: 1 : 1</div>
-
+        <p class="tip_txt">人名币 1 : 1</p>
+        <ul class="payMonery">
+            <li class="item active">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">10.00</a>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">20.00</a>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">30.00</a>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">40.00</a>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">50.00</a>
+            </li>
+            <li class="item">
+                <a href="javascript:;" class="mtui-btn mtui-btn_mini mtui-btn_default">60.00</a>
+            </li>
+        </ul>
         <div class="m-button">
             <input type="button" class="btn-block btn-hollow" value="确认充值">
-            <p style="margin-top: .3rem; color: #c580fd; font-size: .35rem">有问题联系客服</p>
+            <p style="margin-top: .3rem; color: #fff; font-size: .35rem">有问题联系客服</p>
         </div>
 
     </section>
@@ -38,5 +121,13 @@
 </section>
 
 <script src="../assets/js/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/mtui.flexible.js"></script>
+<script>
+    $(function(){
+        $('.payMonery li').on('click', function () {
+            $(".payMonery li").eq($(this).index()).addClass("active").siblings().removeClass("active");
+        })
+    })
+</script>
 </body>
 </html>
